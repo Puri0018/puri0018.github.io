@@ -1,0 +1,138 @@
+
+@keyframes unique {
+  0%,
+  50%{ box-shadow:
+    0px 0px 0px 10px grey,
+    0 0 0 16px purple,
+    0 0 0 30px black;
+  }
+
+  
+  100% {
+    box-shadow:
+    0px 0px 0px 10px aliceblue,
+    0 0 0 16px green,
+    0 0 0 30px blue;
+  }
+  
+
+}
+@keyframes like {
+  0% {
+    transform: scale(1);
+  }
+
+  20%,
+  40% {
+    transform: scale(1.1);
+  
+    opacity: 1;
+    background:  radial-gradient(ellipse at center, #ffa1a1 10%, #ff3a44 85%, #660d12 85%);     
+  }
+
+}
+
+@keyframes shutoff {
+  0% { box-shadow: 0 0 -10px green; }
+  60% { box-shadow: 0 0 12px black; }
+  100% { box-shadow: 0 0 15px blue; }
+}
+
+@keyframes froze{
+  0% { box-shadow: 0 0 -10px green; }
+  60% { box-shadow: 0 0 10px black; }
+  100% { box-shadow: 0 0 -15px blue; }
+}
+
+@keyframes alert{
+
+  0%,
+  100% {
+    background-image: radial-gradient(ellipse at center, #000000 10%, #633739 85%, #a7252c 85%);
+  }
+
+  10%,
+  90% {
+    background-image: radial-gradient(ellipse at center, #000000 10%, #633739 85%, #a7252c 85%);
+  }
+
+  20%,
+  80% {
+    background-image: radial-gradient(ellipse at center,  #000000 10%, #633739 85%, #a7252c 85%);
+  }
+
+  30%,
+  70% {
+    background-image: radial-gradient(ellipse at center, #ff0505 40%, #960910 85%, #960910 85%);
+  }
+
+  40%,
+  60% {
+    background-image: radial-gradient(ellipse at center, #ff0505 50%, #960910 85%, #960910 85%);
+  }
+
+  50% {
+    background-image: radial-gradient(ellipse at center, #ff0505 60%, #960910 85%, #960910 85%);
+  }
+}
+
+@keyframes fast{
+  0% {
+    transform: scale(1);
+  }
+
+  20%,
+  40% {
+    transform: scale(10);
+  }
+
+  60%,
+  80% {
+    transform: scale(0.01);
+  }
+
+  80% {
+    transform: scale(0.01);
+    opacity: 1;
+    background: transparent;
+    /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); */
+  }
+
+  100% {
+    transform: scale(0.01);
+    opacity: 0;
+    background: rgba;
+    /* box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.0); */
+  }
+
+}
+
+.doomsday {
+  animation: froze 2s infinite backwards, forwards;
+}
+
+.doomsday:hover {
+ 
+  animation-name: like, unique;
+  animation-duration: 1s, 4s;
+  animation-iteration-count: infinite, 0;
+  animation-delay: 0,0;
+  animation-fill-mode: backwards, forwards;
+
+}
+
+.doomsday:active {
+  animation-name: alert, fast;
+  animation-duration: 0.2s, 10s;
+  animation-iteration-count: infinite, 1;
+  animation-delay: 0s, 3s;
+  animation-fill-mode: backwards, forwards;
+}
+
+.doomsday:active:after {
+   animation: shutoff 2s infinite backwards, forwards;
+  
+}
+
+
+
